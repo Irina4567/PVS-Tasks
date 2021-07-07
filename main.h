@@ -1,6 +1,14 @@
+#include <optional>
 #ifndef MAIN_H
 #define MAIN_H
 
-unsigned factorial(unsigned x);
+template <class T>
+class monadic_optional : public std::optional<T>
+{
+public:
+	T foo(T a) {
+		return a;
+	};
+};
 
 #endif // MAIN_H

@@ -2,12 +2,8 @@
 
 #include "main.h"
 
-TEST(Test, TestFactorial5)
+TEST(Test, Test_foofail)
 {
-  EXPECT_EQ(factorial(5), 120);
-}
-
-TEST(Test, TestFactorial10)
-{
-  EXPECT_EQ(factorial(10), 3628800);
+	monadic_optional<int> b;
+	EXPECT_EQ(b.foo(10), 10);
 }

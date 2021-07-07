@@ -1,4 +1,3 @@
-cmake_minimum_required(VERSION 3.19.4)
 
 project(proj)
 set(CMAKE_CXX_STANDARD 20)

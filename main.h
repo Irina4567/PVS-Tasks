@@ -10,7 +10,7 @@ std::optional<T> cat(T c)
 
 
 template <class T> 
-class monadic_optional
+class monadic_optional : public std::optional
 {
 public:
 	template <class T2>

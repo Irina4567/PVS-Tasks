@@ -2,14 +2,23 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-template <class T> //шаблон класса, так как надо чтобы для разных вариантов робило
-class monadic_optional : public std::optional<T> 
-	//открытое наследование от шаблона класса std::optional, private члены из std::optional недоступны в monadic_optional, public->public, protected->protected
+template <class T>
+std::optional<T> cat(T c)
+{
+	retutn(std::optional<T>)c;
+}
+
+
+template <class T> 
+class monadic_optional
 {
 public:
-	T foo(T a) {
-		return a;
-	};
+	template <class T2>
+	std::optional<T2> and_then(function<std::optional<T2>(T)> f)
+	{
+		if (this) {
+			return (std::optional)f(*this);
+		}
+	}
 };
-
 #endif // MAIN_H

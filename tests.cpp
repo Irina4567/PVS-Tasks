@@ -7,6 +7,7 @@
 using namespace std;
 TEST(Test, Test_foofail)
 {
+<<<<<<< HEAD
 	auto i = stoi("123"); //����������� ������ � �����, ���� 
 
 	if (i)
@@ -36,3 +37,19 @@ TEST(Test, Test_foofail)
 //	sort(a);
 //	//EXPECT_EQ(sort(a), {1, 2, 3});
 //}
+=======
+	std::optional<int> opt; 
+	if (opt) //эту штуку сокращаю ниже
+	{
+		std::optional<int> b = cat(*opt); //Если opt не False, то использовать в качестве аргумента функции cat
+	}
+
+	monadic_optional<int> opt2; //Объект, у которого есть метод and_then
+	monadic_optional<int> t = opt2.and_then(cat); //Здесь ошибка, error_type для cat, и для cat не удается определить шаблон
+	
+	
+	
+	
+	//EXPECT_EQ(b.foo(10), 10);
+}
+>>>>>>> b07b037b92d0356dfa87ecbf60b0da3f652e1e8e

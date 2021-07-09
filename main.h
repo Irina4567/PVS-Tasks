@@ -7,6 +7,7 @@
 #include <vector>
 using namespace std;
 
+<<<<<<< HEAD
 //template <class T>
 //std::optional<T> cat(T c)
 //{
@@ -24,6 +25,23 @@ public:
 	T t;
 	template <class T>
 	constexpr auto and_then(F&& f)
+=======
+template <class T>
+std::optional<T> cat(T c) //–¢–µ—Å—Ç–æ–≤–∞—è —Ñ—É–Ω–∫—Ü–∏—è cat
+{
+	retutn(std::optional<T>)c; // –≤–æ–∑–≤—Ä–∞—â–∞–µ—Ç –∞—Ä–≥—É–º–µ–Ω—Ç, –ø—Ä–µ–æ–±—Ä–∞–∑–æ–≤–∞–Ω–Ω—ã–π –∫ —Ç–∏–ø—É std::optional<T>
+}
+
+
+template <class T> 
+class monadic_optional : public std::optional //–Ω–∞—Å–ª–µ–¥–æ–≤–∞–Ω–∏–µ –æ—Ç std::optional
+{
+public:
+	template <class T2>
+	std::optional<T2> and_then(function<std::optional<T2>(T)> f) 
+	//ans_then –ø—Ä–∏–Ω–∏–º–∞–µ—Ç –ª—é–±—É—é —Ñ—É–Ω–∫—Ü–∏—é, –∫–æ—Ç–æ—Ä–∞—è –≤–æ–∑–≤—Ä–∞—â–∞–µ—Ç std::optional<T2>. 
+	//–ï—Å–ª–∏ –æ–±—ä–µ–∫—Ç –Ω–µ –ø—É—Å—Ç, —Ç–æ —Ñ—É–Ω–∫—Ü–∏—è –≤—ã–∑—ã–≤–∞–µ—Ç—Å—è —Å–æ –∑–Ω–∞—á–µ–Ω–∏–µ–º –æ–±—ä–µ–∫—Ç–∞ –∏ and_then –≤–æ–∑–≤—Ä–∞—â–∞–µ—Ç std::optional
+>>>>>>> b07b037b92d0356dfa87ecbf60b0da3f652e1e8e
 	{
 		//std::invoke - ÛÌËÙËˆËÓ‚‡ÌÌ˚Ï Ó·‡ÁÓÏ ‚˚Á‚‡ÂÚ ÙÛÌÍÚÓ˚ (‚ Ú.˜. ÎˇÏ·‰˚), ÛÍ‡Á‡ÚÂÎË Ì‡ ÙÛÌÍˆËË Ë ÛÍ‡Á‡ÚÂÎË Ì‡ ÙÛÌÍˆËË-˜ÎÂÌ˚ ÍÎ‡ÒÒÓ‚
 		//(obj->*mem_fn_ptr)( args... );
@@ -42,6 +60,7 @@ public:
 		}
 	}
 };
+<<<<<<< HEAD
 
 
 
@@ -54,3 +73,6 @@ public:
 
 
 #endif // MAIN_H
+=======
+#endif // MAIN_H
+>>>>>>> b07b037b92d0356dfa87ecbf60b0da3f652e1e8e
